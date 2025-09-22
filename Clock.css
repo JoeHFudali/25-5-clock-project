@@ -1,0 +1,59 @@
+#clock-container > h1:first-of-type, #timer-label > h2 {
+  font-weight: bold;
+}
+
+
+@mixin display-type {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin display-middle {
+  display: flex;
+  justify-content: center;
+}
+
+
+html, #clock-root {
+  background-color: #fe7d7d;
+  font-family: Georgia sans-serif;
+}
+
+#clock-container {
+  margin: 0 auto;
+  width: 40%;
+}
+
+#text-row, #buttons-row {
+  @include display-type;
+}
+
+#buttons-row {
+  padding-bottom: 10px;
+}
+
+#break-buttons, #session-buttons {
+  @include display-type;
+  align-items: center;
+  height: 10vh;
+}
+
+#timer-buttons {
+  @include display-middle;
+}
+
+#timer-label {
+  @include display-middle;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 50%;
+  border: 5px solid #893636;
+  border-radius: 30px;
+  
+  
+}
+
+#timer-buttons {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
